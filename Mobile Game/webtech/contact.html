@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+   <script src="validate.js"></script>
+    <link rel="stylesheet" href="conttact.css">
+</head>
+<body>
+    
+     <!-- Header -->
+     <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <br><br>
+
+    <div id="form">
+        <form action="index.html" method="post">
+
+            <p>login</p>
+            <br><br>
+            <label for="username"> User name</label>
+            <input id="name" type="text" name="username" required>
+
+            <br><br>
+            <label for="email/phone"> Email</label>
+            <input  id="email" type="email" name="username" required>
+            <br><br>
+            <label for="email/phone">Password</label>
+            <input type="password" name="username"  required >
+            <br><br>
+            <textarea name="description" id="area" placeholder="leave message" required></textarea>
+            <br><br>
+            <button @click="validate()">Send</button><br>
+            <h2>You don't have an acount?<a href="signup.html">SignUp</a></h2>
+        </form>
+    </div>
+    
+</body>
+</html>

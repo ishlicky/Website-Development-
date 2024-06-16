@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic game</title>
+    <style>
+        fieldset{
+            background-color: rgb(238, 233, 233);
+            margin-left: 200px;
+            margin-right: 100px;
+            margin-top: 100px;
+            border-color: rgb(105, 165, 135);
+            border-radius: 15px;
+            box-shadow: 1px -5px 7px;
+        border: 4px solid red;
+        justify-content: center;
+        align-items: center;
+        } 
+        body{
+            background-color: darkcyan;
+            
+        }
+        #btn{
+            background-color:black;
+            height: 30px;
+            width: 100px;
+            color: white;
+            margin-top: 10px;
+            margin: 3px;
+            border-radius: 5px;
+            border: ;
+        }
+    </style>
+
+</head>
+<body>
+    <fieldset >
+        <div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left:220px;">
+
+            <div class="w3-row w3-white">
+              
+              <div class="w3-col l10 m12" id="main">
+                <div id="mainLeaderboard" style="overflow:hidden;">
+                  <!-- MainLeaderboard-->
+          
+                  <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+                  <div id="adngin-main_leaderboard-0" data-google-query-id="">
+                    
+                    <div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_9__container__" style="border: 0pt none; width: 728px; height: 0px;"></div>
+
+                  <div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_10__container__" style="border: 0pt none; width: 320px; height: 0px;"></div>
+                  
+                  <div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_11__container__" style="border: 0pt none; width: 728px; height: 0px;"></div>
+                </div>
+                  <!-- adspace leaderboard -->
+          
+                </div>
+
+            <h2 style="background-color:rgb(116, 129, 129); width: 400px; text-align: center; color: lightblue; letter-spacing: 4px;">GAMING ON BENU.COM</h2>
+            
+    
+      <hr>
+     
+            <p style="background-color: rgb(132, 175, 153); width: 400px; color: white; letter-spacing: 3px; text-transform: uppercase;">play this game to make your filling  better </p><br><br>
+
+
+      <div id="myfilter" style="position: absolute; background-color: rgb(0, 0, 0); opacity: 0.3; width: 322px; height: 182px; display: block;"></div>
+      <div id="myrestartbutton" style="position: absolute; padding-top: 75px; padding-left: 120px; display: block;"><button onclick="restartGame()" fdprocessedid="td9495">Restart</button></div>
+      <div id="canvascontainer"><canvas width="320" height="180"></canvas></div>
+      <br>
+      <div style="text-align:center;width:320px;">
+        <button ontouchstart="moveup()" onmousedown="moveup()" onmouseup="clearmove()" fdprocessedid="as" id="btn">UP</button><br><br>
+        <button id="btn"  ontouchstart="moveleft()" onmousedown="moveleft()" onmouseup="clearmove()" fdprocessedid="a89h29">LEFT</button>
+        <button  id="btn" ontouchstart="moveright()" onmousedown="moveright()" onmouseup="clearmove()" fdprocessedid="0ltb7">RIGHT</button><br><br>
+        <button id="btn" ontouchstart="movedown()" onmousedown="movedown()" onmouseup="clearmove()" fdprocessedid="vo4uf8">DOWN</button>
+      </div>
+      <br>
+    
+      
+    
+    <script>
+    
+        var myGameArea;
+        var myGamePiece;
+        var myObstacles = [];
+        var myscore;
+        
+        function restartGame() {
+        document.getElementById("myfilter").style.display = "none";
+        document.getElementById("myrestartbutton").style.display = "none";
+        myGameArea.stop();
+        myGameArea.clear();
+        myGameArea = {};
+        myGamePiece = {};
+        myObstacles = [];
+        myscore = {};
+        document.getElementById("canvascontainer").innerHTML = "";
+        startGame()
+        }
+    
+        
+    function startGame() {
+        myGameArea = new gamearea();
+        myGamePiece = new component(30, 30, "yellow", 10, 75);
+        myscore = new component("15px", "Consolas", "black", 220, 25, "text");
+        myGameArea.start();
+    }
+    
+    function gamearea() {
+        this.canvas = document.createElement("canvas");
+        this.canvas.width = 320;
+        this.canvas.height = 180;    
+        document.getElementById("canvascontainer").appendChild(this.canvas);
+        this.context = this.canvas.getContext("2d");
+        this.pause = false;
+        this.frameNo = 0;
+        this.start = function() {
+            this.interval = setInterval(updateGameArea, 20);
+        }
+        this.stop = function() {
+            clearInterval(this.interval);
+            this.pause = true;
+        }
+        this.clear = function(){
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+    
+    function component(width, height, color, x, y, type) {
+    
+        this.type = type;
+        if (type == "text") {
+            this.text = color;
+        }
+        this.score = 0;    this.width = width;
+        
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;    
+        this.x = x;
+        this.y = y;    
+        this.update = function() {
+            ctx = myGameArea.context;
+            if (this.type == "text") {
+    
+                ctx.font = this.width + " " + this.height;
+                ctx.fillStyle = color;
+                ctx.fillText(this.text, this.x, this.y);
+            } else {
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+        this.crashWith = function(otherobj) {
+            var myleft = this.x;
+            var myright = this.x + (this.width);
+            var mytop = this.y;
+            var mybottom = this.y + (this.height);
+            var otherleft = otherobj.x;
+            var otherright = otherobj.x + (otherobj.width);
+            var othertop = otherobj.y;
+            var otherbottom = otherobj.y + (otherobj.height);
+            var crash = true;
+            if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+                crash = false;
+            }
+            return crash;
+        }
+    }
+    
+    function updateGameArea() {
+        var x, y, min, max, height, gap;
+        for (i = 0; i < myObstacles.length; i += 1) {
+            if (myGamePiece.crashWith(myObstacles[i])) {
+                myGameArea.stop();
+                document.getElementById("myfilter").style.display = "block";
+                document.getElementById("myrestartbutton").style.display = "block";
+                return;
+            } 
+        }
+        if (myGameArea.pause == false) {
+            myGameArea.clear();
+            myGameArea.frameNo += 1;
+            myscore.score +=1;        
+            if (myGameArea.frameNo == 1 || everyinterval(150)) {
+                x = myGameArea.canvas.width;
+                y = myGameArea.canvas.height - 100;
+                min = 20;
+                max = 100;
+                height = Math.floor(Math.random()*(max-min+1)+min);
+                min = 50;
+                max = 100;
+                gap = Math.floor(Math.random()*(max-min+1)+min);
+                myObstacles.push(new component(10, height, "orange", x, 0));
+                myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+            }
+            for (i = 0; i < myObstacles.length; i += 1) {
+                myObstacles[i].x += -1;
+                myObstacles[i].update();
+            }
+            myscore.text="SCORE: " + myscore.score;        
+            myscore.update();
+            myGamePiece.x += myGamePiece.speedX;
+            myGamePiece.y += myGamePiece.speedY;    
+            myGamePiece.update();
+        }
+    }
+    
+    
+    function everyinterval(n) {
+        if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+        return false;
+    }
+    
+    function moveup(e) {
+        myGamePiece.speedY = -1; 
+    }
+    
+    function movedown() {
+        myGamePiece.speedY = 1; 
+    }
+    
+    function moveleft() {
+        myGamePiece.speedX = -1; 
+    }
+    
+    function moveright() {
+        myGamePiece.speedX = 1; 
+    }
+    
+    
+    function clearmove(e) {
+        myGamePiece.speedX = 0; 
+        myGamePiece.speedY = 0; 
+    }
+    startGame();
+    
+    </script>
+
+<p style="background-color: rgb(32, 26, 40); width: 300px; text-align: center;letter-spacing: 2px; text-transform: uppercase; color: rgb(33, 195, 60);"> GAME WITH BENU</p>
+    </fieldset>
+    
+</body>
+</html>

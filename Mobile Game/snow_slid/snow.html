@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowboard Slide Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #game-container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        #snowboard {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #hill {
+            width: 400px;
+            height: 400px;
+            background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="hill"></div>
+        <div id="snowboard"></div>
+    </div>
+    <script>
+
+let snowboard = document.getElementById('snowboard');
+let hill = document.getElementById('hill');
+let gameContainer = document.getElementById('game-container');
+
+let snowboardX = 200;
+let snowboardY = 200;
+let speed = 5;
+let gravity = 0.5;
+let jumpForce = -15;
+
+let isJumping = false;
+let jumpVelocity = 0;
+
+document.addEventListener('keydown', (e) => {
+    switch (e.key) {
+        case 'ArrowUp':
+            if (!isJumping) {
+                isJumping = true;
+                jumpVelocity = jumpForce;
+            }
+            break;
+        case 'ArrowDown':
+            snowboardY += speed;
+            break;
+        case 'ArrowLeft':
+            snowboardX -= speed;
+            break;
+        case 'ArrowRight':
+            snowboardX += speed;
+            break;
+    }
+    snowboard.style.top = `${snowboardY}px`;
+    snowboard.style.left = `${snowboardX}px`;
+});
+
+setInterval(() => {
+    // Apply gravity
+    if (isJumping) {
+        jumpVelocity += gravity;
+        snowboardY += jumpVelocity;
+        if (snowboardY > 200) {
+            isJumping = false;
+            snowboardY = 200;
+            jumpVelocity = 0;
+        }
+    }
+
+    // Keep snowboard on hill
+    if (snowboardX < 0) snowboardX = 0;
+    if (snowboardX > 350) snowboardX = 350;
+    if (snowboardY < 0) snowboardY = 0;
+    if (snowboardY > 350) snowboardY = 350;
+
+    // Update snowboard position
+    snowboard.style.top = `${snowboardY}px`;
+    snowboard.style.left = `${snowboardX}px`;
+}, 16); // 16ms = 60fps
+    </script>
+</body>
+</html>

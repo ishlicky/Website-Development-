@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#robotCanvas {
+  border: 1px solid black;
+}
+    </style>
+    <title>Simple Robot</title>
+</head>
+<body>
+    <canvas id="robotCanvas" width="200px" height="200px"></canvas>
+    <button onclick="sayHello()">Say Hello</button>
+    <script>
+        const canvas = document.getElementById('robotCanvas');
+const ctx = canvas.getContext('2d');
+
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+
+class SimpleRobot {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = 50;
+    this.speed = 0.5;
+    this.direction = Math.random() * Math.PI * 2;
+    this.color = '#ff0000';
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  update() {
+    this.x += Math.cos(this.direction) * this.speed;
+    this.y += Math.sin(this.direction) * this.speed;
+
+    if (this.x - this.size / 2 < 0 || this.x + this.size / 2 > canvas.width) {
+      this.direction = Math.PI - this.direction;
+    }
+
+    if (this.y - this.size / 2 < 0 || this.y + this.size / 2 > canvas.height) {
+      this.direction = -Math.PI - this.direction;
+    }
+  }
+}
+
+const robot = new SimpleRobot(canvas.width / 2, canvas.height / 2);
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  robot.draw();
+  robot.update();
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+function sayHello() {
+  const msg = new SpeechSynthesisUtterance(' Ishimwe Jean Claude is a talented software developer from Rwanda. He was born and raised in Kicukiro District, where he attended Kiyumba TSS School. After completing his secondary education, Jean Claude pursued a degree in Software Development at a reputable university in Kigali.During his college years, Jean Claude discovered his passion for software development. He excelled in his studies and was actively involved in various coding clubs and competitions. Upon graduation, he landed a job at a prestigious software development company in Kigali, where he worked for several years before deciding to venture out on his own.In 2022, Jean Claude founded his own software development agency, specializing in creating innovative digital solutions for businesses. His agency quickly gained popularity among local entrepreneurs and start-ups, and soon he was working with clients across various industries. As a software developer, Jean Claude is known for his attention to detail and his ability to deliver high-quality solutions on time. He is proficient in a variety of programming languages, including Java, JavaScript, Python, and C++, HTML, CSS and is always eager to learn new technologies.Despite his success, Jean Claude remains humble and grounded. He credits his achievements to his strong foundation in computer science which he attributes to his time at Kiyumba TSS School and his dedication to continuous learning.Today Jean Claude lives in Kigali, Rwanda, where he continues to develop innovative software solutions for businesses. In his free time he enjoys mentoring young aspiring developers and contributing to open-source projects. He is proud to be part ofRwandas growing tech community and looks forward to seeing how technology will continue to shape the future of his country.');
+  window.speechSynthesis.speak(msg);
+}
+    </script>
+</body>
+</html>

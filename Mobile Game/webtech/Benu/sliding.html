@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="e book.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="ict.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="ubuh.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="roboo.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="robott.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="cod.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="coding.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="communi.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="f1.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="f2.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="f3.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="t1.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="gr.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="lit.mp4" type="video/mp4">
+        </video> 
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="med.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline poster="images/poster.png">
+            <source src="t2.mp4" type="video/mp4">
+        </video> 
+
+    </div>
+    <div class="slider">
+
+        <div class="slide">
+        <img src="600-year-office_HERO2_2000px_1707846405.jpg" alt="Slide 1">
+        </div>
+        
+        <div class="slide">
+        <img src="kiyumba img.jpg" alt="Slide 2">
+        </div>
+        
+        <div class="slide">
+        <img src="csm_A_P_f62b5e8a43.jpg" alt="Slide 3">
+        </div>
+        
+        <div class="slide">
+        <img src="buc.jpg" alt="Slide 4">
+        </div>
+        
+        <div class="slide">
+        <img src="bg.jpg" alt="Slide 5">
+        </div>
+        
+        <div class="slide">
+        <img src="Web-Development-Technologies.png" alt="Slide 6">
+        </div>
+        
+        <div class="slide">
+        <img src="600-year-office_HERO2_2000px_1707846405.jpg" alt="Slide 7">
+        </div>
+        
+        <div class="slide">
+        <img src="debates.jpg" alt="Slide 8">
+        </div>
+        
+        </div>
+        
+        <style>
+        .slider {
+        position: relative;
+        overflow: hidden;
+        }
+        
+        .slide {
+        float: left;
+        width: 100%;
+        height: auto;
+        }
+        
+        .slide img {
+        width: 80%;
+        height: auto;
+        margin-left: 12%;
+        line-height: 41px;
+        }
+       video{height: 200px;
+    width: 300px;}
+        </style>
+        
+        <script>
+        // Set up variables for slider controls
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        
+        // Function to show next slide
+        function showNext() {
+        // Hide current slide
+        slides[currentIndex].classList.remove('active');
+        
+        // Move to next slide
+        currentIndex++;
+        
+        // If end of slides, reset index to beginning
+        if (currentIndex >= slides.length) {
+        currentIndex = 0;
+        }
+        
+        // Show next slide
+        slides[currentIndex].classList.add('active');
+        }
+        
+        // Call showNext every 5 seconds
+        setInterval(() => {
+        showNext();
+        }, 5000);
+        </script>
+        
+        
+</body>
+</html>

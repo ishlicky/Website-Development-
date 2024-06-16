@@ -1,0 +1,50 @@
+#b1{
+  height: 100px;
+   background-color: #3c5a99; 
+}
+
+body{font-family: tahoma;
+    background-color: #e9ebee;}
+
+#bar1{
+    height: 100px;
+    background-color: rgb(59, 89,152);
+    color: white;
+    padding: 4px;
+}
+#signup{
+    background-color: hwb(246 2% 15%);
+    width: 70px;
+   height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    float: right;
+    color: #eee;
+  font-weight: bold;
+}
+#bar2{
+    background-color: white; width:800px;
+    height:650px; 
+    margin:auto; 
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#text{height: 40px;
+width: 300px;
+border-radius: 4px;
+border:solid 1px #ccc ;
+padding: 4px;
+font-size: 24px;}
+#button{
+    width: 300px;
+    height: 40px;
+    font-weight:bold ;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(59, 89,152);
+    color: white;
+font-size: 19px;
+}

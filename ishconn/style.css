@@ -1,0 +1,424 @@
+body{
+    /* background-image:linear-gradient(rgb(158, 137, -168),rgb(158, 137, 168)), url(); */
+    /* background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size:auto; */ 
+    background-color: rgb(45, 43, 46);
+}
+#notif{
+    margin-top: -13px;
+    background-color: rgb(143, 69, 212);
+height: 40px;
+text-align: center;
+width: 100%;
+background-attachment: fixed;
+}
+#notif p{
+    padding-top: 13px;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+#notif a{
+    color: white;
+    margin: 9px;
+    cursor: pointer;
+}
+#reg {
+    float: right;
+    margin-top: -26px;
+    background: transparent;
+    
+}
+#reg button{
+    height: 40px;
+    width: 100px;
+    background: transparent;
+    border: 1px solid  rgb(143, 69, 212);
+    margin-right: 30px;
+    margin-top: -12px;
+    cursor: pointer;
+    transition: ease 1s;
+}
+#reg button:hover{
+    border-color: green;
+}
+#reg a{
+    color:  rgb(143, 69, 212);
+text-decoration: none;
+font-size: 14px;
+}
+#logo img{
+    height: 40px;
+    width: 70px;
+    /* border-radius: 100px; */
+    margin-top: 33px;
+    background-attachment: fixed;
+}
+nav{
+   text-align: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-weight: 700;
+  background-attachment: fixed;
+   
+}
+nav a{
+    color: whitesmoke;
+    margin: 52px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease-out;
+    
+   
+}
+nav a:hover{
+    color: rgba(138, 202, 202, 0.76);
+}
+/* text */
+#text h1{
+    color: white;
+    font-size: 2rem;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 124px;
+}
+#text span{
+    color:  rgb(143, 69, 212);
+    margin: 4px;
+}
+#text p{
+    color: white;
+    font-size: smaller;
+    font-family: sans-serif;
+
+}
+#text #button1{
+    height: 60px;
+    width: 150px;
+    background-color:   rgb(143, 69, 212);
+    border: none;
+    border-radius: 5px;
+    transition: ease-in 1s;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+#text #button2{
+    height: 60px;
+    width: 150px;
+    background-color:   transparent;
+    border: 1px solid rgba(128, 128, 128, 0.644);
+    border-radius: 5px;
+    margin: 7px;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+    
+}
+
+#text #button2:hover{
+    border-color: rgb(143, 69, 212) ;
+}
+#text #button1:hover{
+    background-color: rgb(144, 108, 177) ;
+}
+#ict{
+    background: whitesmoke;
+    height: 80vh;
+    background-attachment: scroll;
+}
+#sec1 img{
+    margin-top: 4rem;
+    height: 350px;
+    width: 530px;
+    margin-left: 5rem;
+    /* border-bottom-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 15px; */
+    border: 1px solid rgb(163, 160, 160);
+}
+#sec1 #ooop{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(123, 28, 212);
+   float: left;
+   justify-content: space-between;
+   margin: 5px;
+   margin-left: 5rem;
+   
+
+}
+#sec1 #op{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(123, 28, 212);
+   float: left;
+   justify-content: space-between;
+   margin: 5px;
+   
+   
+
+}
+
+#sec1 #oop{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(123, 28, 212);
+   float: left;
+   justify-content: space-between;
+   margin: 5px;
+   margin-left: 10rem;
+   margin-top: -4.2rem;
+   
+
+}
+#sec1{
+    margin-top: 6rem;
+}
+#bbb{
+    display: flex;
+}
+
+.btn h2{
+    margin-left:60rem;
+    margin-top: -13rem;
+    position: relative;
+    text-transform: capitalize;
+    font-family: serif;
+}
+.btn #p1{
+    margin-left:60rem;
+    font-size: smaller;
+    color: gray;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+.btn #btn1{
+    height: 50px;
+    width: 200px;
+    background: transparent;
+    border-color: rgb(135, 23, 239);
+    margin-left: 60rem;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+.btn #btn2{
+    height: 50px;
+    width: 200px;
+    background: transparent;
+    border-color: rgb(163, 66, 255);
+    border-radius: 5px;
+    margin-left: 7px;
+
+}
+.btn #btn1  a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: large;
+}
+.btn #btn2 a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: large;
+}
+#bbb #ooop {
+    background-color: rgb(181, 196, 208);
+    text-align: center;
+    margin-top: 6px;
+    padding: 3px;
+    height: 70px;
+    width: 150px;
+    border-radius: 4px;
+    color: rgb(142, 24, 253);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#bbb #op {
+    background-color: rgb(181, 196, 208);
+    text-align: center;
+    margin-top: 6px;
+    padding: 3px;
+    height: 70px;
+    width: 150px;
+    border-radius: 4px;
+    color: rgb(142, 24, 253);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#bbb #oop {
+    background-color: rgb(181, 196, 208);
+    text-align: center;
+   
+    padding: 3px;
+    height: 70px;
+    width: 150px;
+    border-radius: 4px;
+    color: rgb(142, 24, 253);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#bbb #oop{
+margin-left: 15rem;
+}
+
+
+#bbb #ooop #ol{
+    color: black;
+
+}
+#bbb #oop #ol{
+    color: black;
+
+}#bbb #op #ol{
+    color: black;
+
+}
+#social #row{
+    margin-top: 4rem;
+    margin-left: 4rem;
+    color: blueviolet;
+    text-transform: uppercase;
+}
+#social  #tee{
+    margin-left: 3rem;
+    
+    color: rgb(203, 202, 199);
+    text-transform: capitalize;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+#social h5{
+    margin-left: 3rem;
+    color: gray;
+}
+#social #loge img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 7rem;
+    margin-bottom: 15px;
+}
+#social #dd{
+    color: gray;
+     margin-left: 7rem;
+    
+
+}
+#social a{
+    color: white;
+    text-decoration: none;
+    margin-left: 7rem;
+    margin-left: 45rem;
+}
+#row2{
+    margin-left: 45rem;
+}
+#loge1 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 7rem;
+    margin-bottom: 15px;
+
+}
+
+#ikix{
+    background-color: rgb(221, 221, 231);
+    text-align: center;
+    height: 45vh;
+}
+#ikix ul li {
+    list-style: none;
+}
+
+#ikix #ours{
+    float: left;
+    margin-left: 23px;
+    line-height: 17px;
+}
+#ours h4{  text-transform: uppercase;}
+#ikix #link{
+float: left;
+margin-left: 130px;
+line-height: 24px;
+font-weight: 600;
+
+
+}
+#link p{
+    text-transform: uppercase;
+}
+
+#ikix #link ul li a{
+    color: gray;
+
+}
+ #our {
+color: gray;
+text-decoration: none;
+text-transform: capitalize;
+margin-top: 3px;
+margin-top: 33px;
+}
+#ikix #media{
+    float: right;
+    margin-right: 23px;
+    margin-top: -234px;
+}
+#media p{
+    color: black;
+    text-transform: uppercase;
+}
+#cont ul li{
+    line-height: 43px;
+    margin-right: 59px;
+   
+}
+#cont h3{
+    color:black;
+    text-transform: uppercase;
+}
+#cont{
+    margin-top: 30px;
+}
+
+#cont ul li a{
+    color: grey;
+   text-decoration: none;
+}
+#toop {
+    
+ text-transform: capitalize;
+}
+#top{
+    margin-top:124px;
+    margin-right: -64px;
+    height: 40px;
+    width: 100px;
+    background: transparent;
+    border-color: rgb(129, 31, 221);
+    transition: ease-in-out 0.6s;
+    border-width: 2px;
+   
+    cursor: pointer;
+
+
+}
+#top a{
+    color: green;
+    text-decoration: none;
+    font-size: large;
+}
+#top a:hover{
+    cursor: pointer;
+}
+#top:hover{
+    transform: rotate(45%);
+    border-color: rgb(243, 235, 5);
+    
+}
+
+

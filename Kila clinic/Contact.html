@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+             .nav-bar{
+            position: absolute;
+            background-color:  rgba(83, 216, 6, 0.973);
+            width: 1360px;
+            height: 90px;
+            top: -5px;
+            left: 1px;
+      }
+      .logo h1{
+            font-family: 'Poppins',sans-serif;
+            font-weight: 700;
+            color: white;
+      }
+      .links{
+            margin-left: 740px;
+            margin-top: -50px;
+      }
+      .links a{
+            text-decoration: none;
+      font-family: 'Poppins',sans-serif;
+    justify-content: space-between;
+    padding: 5px;
+    color: 
+#fdfdfd;
+font-weight: 700;
+      }
+      .links a:hover, .links a.active{
+            border-top:0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 5px solid #fff;
+            margin-top: 20px;
+
+
+      }
+      .contact{
+            background: black;
+            width: 1363px;
+            height: 300px;
+            margin-top: 10px;
+      }
+      .contact h1{
+            font-family: 'Poppins',sans-serif;
+            font-size: 50px;
+            color: #fdfdfd;
+            text-align: center;
+
+      }
+      .contact h2{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            font-size: 20px;
+            color: #fdfdfd;
+            margin-left: 390px;
+            margin-top: 90px;
+            background: rgb(7, 7, 7);
+            border: 2px solid rgb(129, 127, 127);
+            border-radius: 15px;
+            width: 190px;
+            height: 90px;
+            padding-top: 15px;
+      }
+      .contact p{
+            color: #fdfdfd;
+            font-family: 'Poppins',sans-serif;
+            margin-left: 430px;
+            margin-top: -60px;
+            font-weight: 700;
+      }
+      .contact h3{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            font-size: 20px;
+            color: #fdfdfd;
+            margin-left: 590px;
+            margin-top: -100px;
+            background: rgb(7, 7, 7);
+            border: 2px solid rgb(129, 127, 127);
+            border-radius: 15px;
+            width: 190px;
+            height: 90px;
+            padding-top: 15px;
+      }
+      .contact h4{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            font-size: 20px;
+            color: #fdfdfd;
+            margin-left: 790px;
+            margin-top: -106px;
+            background: rgb(7, 7, 7);
+            border: 2px solid rgb(129, 127, 127);
+            border-radius: 15px;
+            width: 190px;
+            height: 90px;
+            padding-top: 15px;
+      }
+      .medium h1{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            margin-top: 100px;
+      }
+      .medium h2 span{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            color:rgb(127, 240, 22);
+            margin-left: 580px;
+            margin-top: 80px;
+      }
+      .name{
+            float: left;
+            
+            margin-left: 390px;
+      }
+      .name input{
+            width: 250px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-top: -20px;
+            margin-left: -300px;
+      }
+      .name label b{
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;
+            margin-left: -449px;
+      }
+      .email{
+            margin-left: -200px;
+      }
+      .email input{
+            width: 250px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-top: -15px;
+      }
+      .email input ::placeholder{
+            font-family: 'Poppins',sans-serif;
+            font-weight: 700;
+      }
+      .email label b{
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;
+            margin-left: -149px;
+      }
+      .sub{
+            margin-left: -410px;
+            margin-top: 30px;
+      }
+      .sub input{
+            width: 250px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-top: -2px;
+            margin-left: 70px;
+      }
+      .sub label b{
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;  
+            margin-left: -110px; 
+      }
+      .area{
+            margin-left: -100px;
+            margin-top: 30px;
+      }
+      .area label b{
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;
+            margin-left: -370px;
+      }
+      .area textarea{
+            width: 650px;
+            height: 150px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            margin-top: 1px;
+            margin-left: 137px;
+      }
+      button{
+            width: 190px;
+            height: 60px;
+            background:  rgb(83, 145, 4);
+            color: #fdfdfd;
+            font-family: 'Poppins',sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            margin-left: -420px;
+            border: 1px;
+            border-color: rgb(83, 145, 4);
+            border-radius: 12px;
+      }
+      .footer{
+            background: rgb(0, 0, 0);
+            width: 1400px;
+            height: 200px;
+            margin-left: -3px;
+      }
+      .footer h2{
+            font-family: 'Poppins',sans-serif;
+            font-weight: 800;
+            color: #c7c0c0;
+            
+      }
+      .footer h3{
+            font-family: 'Poppins',sans-serif;
+            color: #e4dede;
+      }
+      .footer .cone{
+            margin-left: 490px;
+            margin-top: -190px;
+      }
+      .footer .cone a{
+            text-decoration: none;
+            color: #918a8a;
+            font-family: 'Poppins',sans-serif;
+            font-weight: 700;
+      }
+      .footer .follow{
+            margin-left: 990px;
+            margin-top: -150px;
+      }
+      .footer .follow a{
+            text-decoration: none;
+            color: #afaaaa;
+            font-family: 'Poppins',sans-serif;
+            font-weight: 700;
+      }
+      .footer .end h3{
+            margin-left: 498px;
+      }
+      .icons{
+            margin-left: 600px;
+            margin-top: -140px;
+      }
+      .box{
+            background:rgb(226, 223, 223);
+            width: 800px;
+            height: 520px;
+            border: 1px solid whitesmoke;
+            padding-top: 60px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 2px 2px whitesmoke;
+      }
+
+
+      </style>
+</head>
+<body>
+      <div class="nav-bar">
+            <div class="logo">
+                  <img src="h-logo.jpg" alt="" style="height: 30px; width: 30px; border: 100px; position: absolute; margin-left: 13px;">
+                  <h1 style="margin-left: 45px;">Kira Clinic</h1>
+            </div>
+            <div class="links">
+                  <a href="kiraclinic.html">Home</a>&nbsp;&nbsp;&nbsp;
+                  <a href="">Service</a>&nbsp;&nbsp;&nbsp;
+                  <a href="">Parternership</a>&nbsp;&nbsp;&nbsp;
+                  <a href="">Our Doctors</a>&nbsp;&nbsp;&nbsp;
+                  <a href="">About</a>&nbsp;&nbsp;&nbsp;
+                  <a href="Contact.html" class="active">Contact Us</a>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="contact">
+                  <h1>Contact us</h1>
+                  <h2>Phone</h2>
+                  <p>+27389794</p>
+                  <h3>Email</h3>
+                  <p style="margin-left: 620px;">info@kiraclinic.com</p>
+
+                  <h4>Location</h4>
+                  <p style="margin-left: 820px;">Nyagatare District</p>
+                 
+
+            </div>
+            <div class="icons"> 
+                  <ion-icon name="call-sharp" style="font-size: 40px; color:  rgb(127, 240, 22);  margin-left: -190px;"></ion-icon>
+                  <ion-icon name="mail-sharp" style="font-size: 40px; color:  rgb(120, 240, 22); margin-left: 150px;"></ion-icon>
+                  <ion-icon name="location-sharp" style="font-size: 40px; color:  rgb(109, 240, 22); margin-left: 160px;"></ion-icon>
+            </div>
+            <div class="medium">
+                  <h1>Love to hear from you,</h1>
+                  <h2><span>Let's get in touch!</span></h2>
+            </div>
+            <div class="input-box">
+                  <center>
+                    <div class="box">
+                        <div class="name">
+                              <label><b>Your names</b></label><br>
+                              <br>
+                              <input type="text" placeholder="Type your name">
+                        </div>
+                        <div class="email">
+                              <label><b>Your email</b></label><br>
+                              <br>
+                              <input type="email" placeholder="Type your email">
+                        </div>
+                        <div class="sub">
+                              <label><b>Subject</b></label><br>
+                              <input type="text" placeholder="Type your subject">
+                        </div>
+                        <div class="area">
+                              <label><b>Your message</b></label><br>
+                              <textarea name="" id="" cols="70" rows="8" placeholder="Write your message"></textarea>
+                        </div>
+                        <button>Send message</button>
+                    </div>
+            </center>
+            </div>
+            <div class="footer">
+                  <h2>KIRA CLINIC</h2>
+                  <h3>Rwanda Nyagatare District<br>Street KV20 ST<br><br>Phone:+25078788885
+                  <br>Email:infoKiraclinic@gmail.com</h3>
+                  <div class="cone">
+                        <h2>Our Services</h2>
+                        <a href=""><ion-icon name="time-sharp" style="color: white;"></ion-icon>Consultation</a><br>
+                        <a href=""><ion-icon name="medkit-sharp" style="color:white;"></ion-icon>Hospital</a><br>
+                        <a href=""><ion-icon name="woman-sharp" style="color: white;"></ion-icon>
+                              Dentist</a><br>
+                        <a href=""><ion-icon name="time-sharp" style="color: white;"></ion-icon>Consultation</a><br>
+                  </div>
+                  <div class="follow">
+                        <h2>Follow Us</h2>
+                        <a href=""><ion-icon name="logo-facebook" style="color: rgb(54, 101, 231);"></ion-icon>Facebook</a><br>
+                        <a href=""><ion-icon name="logo-twitter" style="color: rgb(43, 147, 245);"></ion-icon>Twitter</a><br>
+                        <a href=""><ion-icon name="logo-instagram" style="color: rgb(236, 69, 69);"></ion-icon>Instagram</a><br>
+                        <a href=""><ion-icon name="logo-linkedin" style="color: rgb(0, 132, 255);"></ion-icon>LinkedIn</a><br>
+                        <a href=""><ion-icon name="logo-youtube" style="color: rgb(248, 6, 6);"></ion-icon>Youtube</a><br>
+                  </div>
+                  <div class="end">
+                        <h3>2024 Copyright.KiraClinic,Ltd</h3>
+                  </div>
+      
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
